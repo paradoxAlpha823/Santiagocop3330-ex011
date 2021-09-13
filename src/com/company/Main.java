@@ -6,7 +6,6 @@
 
 package com.company;
 import java.util.Scanner;
-import java.text.*;
 
 public class Main {
 
@@ -36,9 +35,10 @@ public class Main {
 
         double n1 = num1;
         double n2 = num2;
-        double usd = n2*n1;
-        DecimalFormat form = new DecimalFormat("#.##");
-        String usda = form.format(usd);
+        double usdp = n2*n1*100;
+        double usd1 = Math.ceil(usdp);
+        double usda = usd1/100;
+
 
         System.out.println(n1 + " euros at an exchange rate of " + n2 + " is\r\n" + usda+ " US dollars.");
 
